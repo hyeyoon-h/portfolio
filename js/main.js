@@ -86,23 +86,23 @@ const pubContents = [
 const pubLinks = [
    {
       title: 'OB맥주',
-      gitHub: '#',
-      website: '#',
+      gitHub: 'https://github.com/hyeyoon-h/ob',
+      website: 'https://hyeyoon-h.github.io/ob/',
       proposal: '#'
    },{
       title: 'DB그룹',
-      gitHub: '#',
-      website: '#',
+      gitHub: 'https://github.com/hyeyoon-h/db',
+      website: 'https://hyeyoon-h.github.io/db/',
       proposal: '#'
    },{
       title: '유한건강생활',
-      gitHub: '#',
-      website: '#',
+      gitHub: 'https://github.com/hyeyoon-h/youhancare',
+      website: 'https://hyeyoon-h.github.io/youhancare/',
       proposal: '#'
    },{
       title: '카이스트',
-      gitHub: '#',
-      website: '#',
+      gitHub: 'https://github.com/hyeyoon-h/kaist',
+      website: 'https://hyeyoon-h.github.io/kaist/',
       proposal: '#'
    },
 ]
@@ -200,25 +200,25 @@ updateContent(0);
 // learning-log
 const learningItems = [
    {
-      link : '#',
+      link : 'https://hyeyoon-h.github.io/todo-list/',
       group : '# JavaScript',
       title : 'To-do List',
       url : 'images/todo.png'
    },
    {
-      link : '#',
+      link : 'https://hyeyoon-h.github.io/rock-scissors-paper/',
       group : '# JavaScript',
       title : '가위바위보 게임',
       url : 'images/js_game_1.png'
    },
    {
-      link : '#',
+      link : 'https://hyeyoon-h.github.io/quiz/',
       group : '# JavaScript',
       title : 'Quiz game',
       url : 'images/quiz.png'
    },
    {
-      link : '#',
+      link : 'https://hyeyoon-h.github.io/gsap-portfolio/',
       group : '# Library',
       title : 'GSAP ScrollTrigger',
       url : 'images/port_design.png'
