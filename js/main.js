@@ -88,7 +88,7 @@ const pubLinks = [
       title: 'OB맥주',
       gitHub: 'https://github.com/hyeyoon-h/ob',
       website: 'https://hyeyoon-h.github.io/ob/',
-      proposal: 'https://www.figma.com/proto/jyPkEPaxfM8p0SlEhSeimk/OB%EB%A7%A5%EC%A3%BC-%EA%B8%B0%ED%99%95%EC%95%88?page-id=0%3A1&node-id=1-2&viewport=350%2C128%2C0.29&t=v94xy3gRoqvcBgfK-1&scaling=min-zoom&content-scaling=fixed'
+      proposal: 'https://www.figma.com/proto/jyPkEPaxfM8p0SlEhSeimk?node-id=0-1&t=ZxaB9IejLshQHQDC-6'
    },{
       title: 'DB그룹',
       gitHub: 'https://github.com/hyeyoon-h/db',
