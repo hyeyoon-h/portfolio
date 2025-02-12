@@ -204,20 +204,22 @@ const learningItems = [
       group : '# JavaScript',
       title : 'To-do List',
       url : 'images/todo.png'
-   },
-   {
+   },{
       link : 'https://hyeyoon-h.github.io/rock-scissors-paper/',
       group : '# JavaScript',
       title : '가위바위보 게임',
       url : 'images/js_game_1.png'
-   },
-   {
+   },{
+      link : 'https://hyeyoon-h.github.io/memo-react/',
+      group : '# React',
+      title : '메모장',
+      url : 'images/memo_design.png'
+   },{
       link : 'https://hyeyoon-h.github.io/quiz/',
       group : '# JavaScript',
       title : 'Quiz game',
       url : 'images/quiz.png'
-   },
-   {
+   },{
       link : 'https://hyeyoon-h.github.io/gsap-portfolio/',
       group : '# Library',
       title : 'GSAP ScrollTrigger',
