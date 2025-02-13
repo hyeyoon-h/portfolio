@@ -269,3 +269,16 @@ nextBtn.addEventListener('click', function() {
    }
 })
 
+
+// ScrollTrigger
+gsap.registerPlugin(ScrollTrigger);
+gsap.to('.learning', {
+   scrollTrigger: {
+      trigger: '.publishing',
+      start: 'top -10%',
+      end: 'bottom -10%',
+      pin: true,
+      pinSpacing: false,
+      scrub: 1
+   }
+})

@@ -15,6 +15,10 @@
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css">
    <link rel="stylesheet" href="css/main.css">
 
+   <!-- gsap-->
+   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
    <!-- JS -->
    <script defer src="js/main.js"></script>
 
@@ -32,16 +36,13 @@
             </div>
             <div class="nav-wrap">
                <button class="nav-btn" type="button"><span class="blind">메뉴 토글 버튼</span><i class="ri-menu-line"></i></button>
-               <!-- <div class="nav-logo">
-                  <img src="images/logo.png" alt="">
-               </div> -->
                <nav>
                   <ul class="nav-side">
-                     <li><a href="#Home" target="blank">HOME</a></li>
-                     <li><a href="#aboutMe" target="blank">ABOUT&nbsp;ME</a></li>
-                     <li><a href="#skills" target="blank">SKILLS</a></li>
-                     <li><a href="#publishing" target="blank">WEB PUBLISHING</a></li>
-                     <li><a href="#learning" target="blank">LEARNING LOG</a></li>
+                     <li><a href="#Home" target="_self">HOME</a></li>
+                     <li><a href="#aboutMe" target="_self">ABOUT&nbsp;ME</a></li>
+                     <li><a href="#skills" target="_self">SKILLS</a></li>
+                     <li><a href="#publishing" target="_self">WEB PUBLISHING</a></li>
+                     <li><a href="#learning" target="_self">LEARNING LOG</a></li>
                   </ul>
                </nav>
             </div>
@@ -311,7 +312,7 @@
                <span>Thank you for reviewing my portfolio!</span>
                <span>Thank you for reviewing my portfolio!</span>
             </div>
-            <p>본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.</p>
+            <p>본 페이지는 상업적 목적이 아닌 <br class="br-1">개인 포트폴리오용으로 제작되었습니다.</p>
             <p>Copyright 2024. HYEYOON all rights reserved.</p>
          </div>
       </footer>

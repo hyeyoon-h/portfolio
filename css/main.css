@@ -29,7 +29,7 @@ a {
 }
 section {
    margin: 10% 0;
-   min-height: 550px;
+   min-height: 600px;
 }
 ul, li {list-style: none;}
 
@@ -70,6 +70,7 @@ header {
 .nav-btn i {
    display: block;
    font-size: 32px;
+   color: #000;
 }
 .nav-wrap nav {
    display: none;
@@ -238,6 +239,7 @@ header {
    width: 100vw;height: 100vh;
    font-size: 16px;
    letter-spacing: 2px;
+   background: #fff;
 }
 .about-me-inner {
    display: flex;
@@ -253,6 +255,7 @@ header {
    display: inline-block;
    position: relative;
    font-weight: 600;
+   z-index: 1;
 }
 .about-me-left p span::after {
    content: "";
@@ -333,6 +336,9 @@ header {
    }
    .about-me-left p {
       font-size: 16px;
+   }
+   .about-me-left p span::after {
+      width: 30px;
    }
    .about-me-text {
       padding-bottom: 15%;
@@ -491,6 +497,9 @@ header {
    justify-content: center;
    align-items: center;
    width: 100vw;height: 100vh;
+   background: #fff;
+   overflow: hidden;
+   z-index: 1;
 }
 .publishing-inner {
    display: flex;
@@ -499,6 +508,7 @@ header {
    gap: 3%;
    padding: 0 3%;
    width: 90%;
+   min-height: 550px;
    overflow: hidden;
 }
 .publishing-left {
@@ -525,6 +535,7 @@ header {
    text-align: left;
    cursor: pointer;
    width: 100px;
+   color: #000;
 }
 .publishing-btns .pubclick {
    font-weight: 700;
@@ -657,15 +668,18 @@ header {
 }
 @media screen and (max-width: 768px) {
    .publishing-left h2 {
-      font-size: 24px;
+      font-size: 28px;
    }
    .publishing-btns button {
       width: 80px;
+      text-align: center;
       font-size: 14px;
    }
    .publishing-btns .pubclick::after {
-      top: -5px;left: -8px;
-      width: 15px;height: 15px;
+      width: 80px;height: 20px;
+      border-radius: 10px;
+      top: 0;left: 0;
+      opacity: 0.5;
    }
    .publishing-right {
       flex-direction: column;
@@ -679,12 +693,19 @@ header {
       max-height: 250px;
    }
    .publishing-text {
+      border-top: 1px solid var(--point-color-1);
       width: 70%;
+   }
+   .publishing-text strong {
+      display: none;
    }
    .publishing-text table {
       margin: auto;
-      padding-top: 10px;
+      padding-top: 20px;
       font-size: 14px;
+   }
+   .publishing-text table th {
+      width: 120px;
    }
    .publishing-text strong {
       text-align: center;
@@ -695,15 +716,34 @@ header {
       justify-content: center;
    }
 }
+@media screen and (max-width: 500px) {
+   .publishing-btns {
+      gap: 10px;
+   }
+   .publishing-text th {
+      padding-bottom: 5px;
+   }
+   .publishing-text td {
+      padding-bottom: 5px;
+   }
+   .publishing-link {
+      padding-top: 0;
+   }
+   .publishing-link a {
+      padding: 5px 15px;
+      margin-right: 15px;
+   }
+}
 
 /* learning */
 .learning {
    display: flex;
    justify-content: center;
    align-items: center;
+   position: relative;
    width: 100vw;height: 100vh;
-   /* overflow: hidden; */
-
+   background: #fff;
+   z-index: 1;
 }
 .learning-inner {
    display: flex;
@@ -820,6 +860,7 @@ header {
       width: 100%;
    }
    .learning-left h2 {
+      font-size: 28px;
       padding-bottom: 20px;
    }
    .learning-hashtag {
@@ -840,6 +881,8 @@ header {
 footer {
    background-color: var(--main-color);
    color: var(--text-color);
+   width: 100vw;
+   overflow: hidden;
 }
 
 .footer-inner {
@@ -866,4 +909,19 @@ footer {
    line-height: 1.5;
    font-size: 14px;
    text-align: center;
+}
+.footer-inner .br-1 {
+   display: none;
+}
+@media screen and (max-width: 500px) {
+   .footer-greet span {
+      font-size: 36px;
+   }
+   .footer-inner p {
+      line-height: 1.2;
+      padding-bottom: 10px;
+   }
+   .footer-inner .br-1 {
+      display: flex;
+   }
 }
