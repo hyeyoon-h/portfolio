@@ -35,12 +35,6 @@ let num = 0;
 const visualImg = document.querySelector('.main-visual-img img')
 
 function changeImg() {
-   const imgElem = document.querySelector('.main-visual-img img');
-
-   imgElem.style.animation = 'none';
-   void imgElem.offsetWidth;
-   imgElem.style.animation = 'fadein 1.5s';
-
    visualImg.setAttribute("src", imgBox[num].src);
    num++;
    if(num >= imgBox.length) {

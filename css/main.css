@@ -173,14 +173,6 @@ header {
    border-top-right-radius: 330px;
    transition: all 0.2s linear;
 }
-@keyframes fadein {
-   from {
-		filter: blur(20px);
-	}
-	to {
-      filter: blur(0);
-	}
-}
 .main-visual-img img {
    width: 100%;height: 100%;
 }
