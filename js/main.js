@@ -199,10 +199,10 @@ const learningItems = [
       title : 'To-do List',
       url : 'images/todo.png'
    },{
-      link : 'https://hyeyoon-h.github.io/rock-scissors-paper/',
-      group : '# JavaScript',
-      title : '가위바위보 게임',
-      url : 'images/js_game_1.png'
+      link : 'https://hyeyoon-h.github.io/login-form/',
+      group : '# Sass',
+      title : 'login-form',
+      url : 'images/login_form.png'
    },{
       link : 'https://hyeyoon-h.github.io/memo-react/',
       group : '# React',
