@@ -209,6 +209,11 @@ const learningItems = [
       title : '메모장',
       url : 'images/memo_design.png'
    },{
+      link : 'https://hyeyoon-h.github.io/rock-scissors-paper/',
+      group : '# JavaScript',
+      title : '가위바위보 게임',
+      url : 'images/rock_scissors_paper.png'
+   },{
       link : 'https://hyeyoon-h.github.io/quiz/',
       group : '# JavaScript',
       title : 'Quiz game',
