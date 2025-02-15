@@ -200,8 +200,8 @@ const learningItems = [
       url : 'images/todo.png'
    },{
       link : 'https://hyeyoon-h.github.io/login-form/',
-      group : '# Sass',
-      title : 'login-form',
+      group : '# Library',
+      title : 'Sass_login form',
       url : 'images/login_form.png'
    },{
       link : 'https://hyeyoon-h.github.io/memo-react/',
@@ -223,50 +223,87 @@ const learningItems = [
       group : '# Library',
       title : 'GSAP ScrollTrigger',
       url : 'images/port_design.png'
-   },
+   }
 ]
 
-
-
-for(i = 0; i < learningItems.length; i++) {
-   const learningList = document.querySelector('.learning-list')
-   const liTag = document.createElement('li')
-   liTag.className = 'learning-item';
-   liTag.style.backgroundImage = `url(${learningItems[i].url})`
-   liTag.setAttribute('draggable', 'false')
-
-   liTag.innerHTML = `
-      <a href=${learningItems[i].link} target = "_blank">
-         <span>${learningItems[i].group}</span>
-         <strong>${learningItems[i].title}</strong>
-      </a>
-   `
-
-   learningList.append(liTag)
-}
-
-
 const learnList = document.querySelector('.learning-list')
-const learnItems = document.querySelectorAll('.learning-item')
+const hashtags = document.querySelectorAll('.learning-hashtag span')
 const prevBtn = document.querySelector('.prev')
 const nextBtn = document.querySelector('.next')
 
-let TotalLearning = learnItems.length
 let firstShow = 0;
+let totalList = 0;
+let filter = null;
+
+function listFilter(filter) {
+   learnList.innerHTML = "";
+
+   learningItems.forEach(itmes => {
+      if(!filter || itmes.group === filter) {
+         const liTag = document.createElement('li')
+         liTag.className = 'learning-item';
+         liTag.style.backgroundImage = `url(${itmes.url})`
+         liTag.setAttribute('draggable', 'false')
+
+         liTag.innerHTML = `
+            <a href=${itmes.link} target = "_blank">
+               <span>${itmes.group}</span>
+               <strong>${itmes.title}</strong>
+            </a>
+         `
+
+         learnList.append(liTag)
+         totalList++;
+      }
+   });
+};
+
+
+
+
+hashtags.forEach(hashtag => {
+   hashtag.addEventListener('click', function() {
+      const selectedTag = hashtag.innerHTML.trim();
+
+      //toggle
+      // if(learnList.dataset.filter === selectedTag) {
+      //    listFilter();
+      //    delete learnList.dataset.filter;
+      // } else {
+      //    listFilter(selectedTag);
+      //    learnList.dataset.filter = selectedTag;
+      // }
+
+      listFilter(selectedTag);
+      firstShow = 0;
+      totalList =  document.querySelectorAll('.learning-item').length;
+      learnList.style.transform = 'translateX(0px)'
+   });
+});
+
+
+// totalLearning =  document.querySelectorAll('.learning-item').length;
 
 prevBtn.addEventListener('click', function() {
    if(firstShow > 0) {
       firstShow--;
       learnList.style.transform = `translateX(-${firstShow * 370}px)`
+   } else {
+      prevBtn.disabled
    }
-})
+});
 
 nextBtn.addEventListener('click', function() {
-   if(firstShow < TotalLearning - 1) {
+   if(firstShow < totalList - 1) {
       firstShow++;
       learnList.style.transform = `translateX(-${firstShow * 370}px)`
+   } else {
+      nextBtn.disabled
    }
-})
+});
+
+
+listFilter();
 
 
 // ScrollTrigger
@@ -280,4 +317,4 @@ gsap.to('.learning', {
       pinSpacing: false,
       scrub: 1
    }
-})
+});

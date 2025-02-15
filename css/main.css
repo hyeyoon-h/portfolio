@@ -761,6 +761,7 @@ header {
    border-radius: 20px;
    font-size: 14px;
    font-weight: 400;
+   cursor: pointer;
 }
 .learning-hashtag span:hover {
    background-color: var(--point-color-2);
@@ -806,7 +807,7 @@ header {
 .learning-item a span {
    font-size: 14px;
    font-weight: 400;
-   padding: 10px 20px;
+   padding: 10px 40px;
    color: transparent;
 }
 .learning-item a:hover span {
@@ -815,7 +816,7 @@ header {
    transition: all 0.3s linear;
 }
 .learning-item a strong {
-   padding: 0 20px 30px;
+   padding: 0 40px 40px;
    font-weight: 500;
    font-size: 20px;
    color: transparent;
