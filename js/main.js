@@ -262,8 +262,11 @@ function listFilter(filter) {
 
 
 hashtags.forEach(hashtag => {
-   hashtag.addEventListener('click', function() {
+   hashtag.addEventListener('click', function(e) {
       const selectedTag = hashtag.innerHTML.trim();
+
+      hashtags.forEach(tag => tag.style.backgroundColor = "");
+      e.currentTarget.style.backgroundColor = "var(--point-color-2)";
 
       //toggle
       // if(learnList.dataset.filter === selectedTag) {
