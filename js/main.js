@@ -1,9 +1,9 @@
 // main.js
 
 // header
-const navBtn = document.querySelector('.nav-btn')
-const navIcon = document.querySelector('.nav-btn i')
-const nav = document.querySelector('.nav-wrap nav')
+const navBtn = document.querySelector('.nav-btn');
+const navIcon = document.querySelector('.nav-btn i');
+const nav = document.querySelector('.nav-wrap nav');
 
 let isOpen = false;
 
@@ -11,14 +11,14 @@ navBtn.addEventListener('click', function() {
    if(isOpen) {
       navIcon.className = 'ri-menu-line';
       nav.style.display = 'none';
-      document.querySelector('html').style.overflow = 'visible'
+      document.querySelector('html').style.overflow = 'visible';
    } else {
       navIcon.className = 'ri-close-line';
       nav.style.display = 'flex';
-      document.querySelector('html').style.overflow = 'hidden'
+      document.querySelector('html').style.overflow = 'hidden';
    }
    isOpen = !isOpen;
-})
+});
 
 
 // main-visual
@@ -32,7 +32,7 @@ const imgBox = [
 
 let num = 0;
 
-const visualImg = document.querySelector('.main-visual-img img')
+const visualImg = document.querySelector('.main-visual-img img');
 
 function changeImg() {
    visualImg.setAttribute("src", imgBox[num].src);
@@ -40,7 +40,7 @@ function changeImg() {
    if(num >= imgBox.length) {
       num = 0;
    }
-}
+};
 setInterval(changeImg, 1500);
 
 
@@ -50,32 +50,32 @@ const pubContents = [
       title : 'OB맥주',
       viewport : '반응형',
       page : 'Main Page',
-      contribution: '퍼블리싱 100%',
+      contribution: '코딩 & 디자인 100%',
       Tools: 'HTML + CSS + JS',
       imgsrc : 'images/ob_design.png'
    },{
       title : 'DB그룹',
       viewport : '반응형',
       page : 'Main Page',
-      contribution: '퍼블리싱 100%',
+      contribution: '코딩 & 디자인 100%',
       Tools: 'HTML + CSS + JS',
       imgsrc : 'images/ob_design.png'
    },{
       title : '유한건강생활',
       viewport : '반응형',
       page : 'Main Page',
-      contribution: 'Clone coding',
+      contribution: `코딩 100%`,
       Tools: 'HTML + CSS + JS',
       imgsrc : 'images/ob_design.png'
    },{
       title : '카이스트',
       viewport : '반응형',
       page : 'Main Page',
-      contribution: 'Clone coding',
+      contribution: '코딩 100%',
       Tools: 'HTML + CSS + JS',
       imgsrc : 'images/ob_design.png'
    },
-]
+];
 
 const pubLinks = [
    {
@@ -92,14 +92,14 @@ const pubLinks = [
       title: '유한건강생활',
       gitHub: 'https://github.com/hyeyoon-h/youhancare',
       website: 'https://hyeyoon-h.github.io/youhancare/',
-      proposal: 'https://www.figma.com/login?is_not_gen_0=true'
+      // proposal: 'https://www.figma.com/login?is_not_gen_0=true'
    },{
       title: '카이스트',
       gitHub: 'https://github.com/hyeyoon-h/kaist',
       website: 'https://hyeyoon-h.github.io/kaist/',
-      proposal: 'https://www.figma.com/login?is_not_gen_0=true'
+      // proposal: 'https://www.figma.com/login?is_not_gen_0=true'
    },
-]
+];
 
 const pubImgs = [
    {
@@ -118,10 +118,10 @@ const pubImgs = [
       src : 'images/kaist.png',
       alt : '카이스트 디자인'
    },
-]
+];
 
 const pubBtnAll = document.querySelectorAll('.publishing-btns button');
-const pubImgWrap = document.querySelector('.publishing-img')
+const pubImgWrap = document.querySelector('.publishing-img');
 const pubImg = document.querySelector('.publishing-img img');
 const pubTextwrap = document.querySelector('.publishing-text');
 
@@ -140,13 +140,13 @@ function updateImg(index) {
 
    pubImgWrap.innerHTML = '';
 
-   const imgTag = document.createElement('img')
-   imgTag.src = selectedImg.src
-   imgTag.alt = selectedImg.alt
+   const imgTag = document.createElement('img');
+   imgTag.src = selectedImg.src;
+   imgTag.alt = selectedImg.alt;
 
-   pubImgWrap.append(imgTag)
+   pubImgWrap.append(imgTag);
 }
-updateImg(0)
+updateImg(0);
 
 function updateContent(index) {
    const selectedContent = pubContents[index];
@@ -179,11 +179,12 @@ function updateContent(index) {
 
    const pubLinkWrap = document.createElement('div');
    pubLinkWrap.className = 'publishing-link';
-   pubLinkWrap.innerHTML = `
-      <a href="${selectedLink.gitHub}" target="_blank">GitHub</a>
-      <a href="${selectedLink.website}" target="_blank">웹 사이트</a>
-      <a href="${selectedLink.proposal}" target="_blank">기획서</a>
-   `;
+
+   const gitHubLink = `<a href="${selectedLink.gitHub}" target="_blank">GitHub</a>`;
+   const websiteLink = `<a href="${selectedLink.website}" target="_blank">웹 사이트</a>`;
+   const proposalLink = selectedLink.proposal ? `<a href="${selectedLink.proposal}" target="_blank">기획서</a>` : '';
+
+   pubLinkWrap.innerHTML = gitHubLink + websiteLink + proposalLink;
 
    pubTextwrap.append(strongTag, tableTag, pubLinkWrap);
 }
@@ -224,7 +225,7 @@ const learningItems = [
       title : 'GSAP ScrollTrigger',
       url : 'images/port_design.png'
    }
-]
+];
 
 const learnList = document.querySelector('.learning-list')
 const hashtags = document.querySelectorAll('.learning-hashtag span')
@@ -242,24 +243,21 @@ function listFilter(filter) {
       if(!filter || itmes.group === filter) {
          const liTag = document.createElement('li')
          liTag.className = 'learning-item';
-         liTag.style.backgroundImage = `url(${itmes.url})`
-         liTag.setAttribute('draggable', 'false')
+         liTag.style.backgroundImage = `url(${itmes.url})`;
+         liTag.setAttribute('draggable', 'false');
 
          liTag.innerHTML = `
             <a href=${itmes.link} target = "_blank">
                <span>${itmes.group}</span>
                <strong>${itmes.title}</strong>
             </a>
-         `
+         `;
 
          learnList.append(liTag)
          totalList++;
       }
    });
 };
-
-
-
 
 hashtags.forEach(hashtag => {
    hashtag.addEventListener('click', function(e) {
@@ -280,31 +278,29 @@ hashtags.forEach(hashtag => {
       listFilter(selectedTag);
       firstShow = 0;
       totalList =  document.querySelectorAll('.learning-item').length;
-      learnList.style.transform = 'translateX(0px)'
+      learnList.style.transform = 'translateX(0px)';
    });
 });
-
 
 // totalLearning =  document.querySelectorAll('.learning-item').length;
 
 prevBtn.addEventListener('click', function() {
    if(firstShow > 0) {
       firstShow--;
-      learnList.style.transform = `translateX(-${firstShow * 370}px)`
+      learnList.style.transform = `translateX(-${firstShow * 370}px)`;
    } else {
-      prevBtn.disabled
+      prevBtn.disabled;
    }
 });
 
 nextBtn.addEventListener('click', function() {
    if(firstShow < totalList - 1) {
       firstShow++;
-      learnList.style.transform = `translateX(-${firstShow * 370}px)`
+      learnList.style.transform = `translateX(-${firstShow * 370}px)`;
    } else {
-      nextBtn.disabled
+      nextBtn.disabled;
    }
 });
-
 
 listFilter();
 
