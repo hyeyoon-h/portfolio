@@ -64,14 +64,14 @@ const pubContents = [
       title : '유한건강생활',
       viewport : '반응형',
       page : 'Main Page',
-      contribution: `코딩 100%`,
+      contribution: `클론 코딩 100%`,
       Tools: 'HTML + CSS + JS',
       imgsrc : 'images/ob_design.png'
    },{
       title : '카이스트',
       viewport : '반응형',
       page : 'Main Page',
-      contribution: '코딩 100%',
+      contribution: '클론 코딩 100%',
       Tools: 'HTML + CSS + JS',
       imgsrc : 'images/ob_design.png'
    },
