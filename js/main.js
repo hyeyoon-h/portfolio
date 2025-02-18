@@ -307,13 +307,17 @@ listFilter();
 
 // ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
-gsap.to('.learning', {
+gsap.from('.learning', {
+   y: 50,
+   opacity: 0,
+   duration: 1.5,
+   ease: "power2.out",
    scrollTrigger: {
       trigger: '.publishing',
       start: 'top -10%',
       end: 'bottom -10%',
       pin: true,
       pinSpacing: false,
-      scrub: 1
+      scrub: 1,
    }
 });

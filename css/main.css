@@ -491,7 +491,7 @@ header {
    width: 100vw;height: 100vh;
    background: #fff;
    overflow: hidden;
-   z-index: 1;
+   transition: transform 1s linear;
 }
 .publishing-inner {
    display: flex;
@@ -528,6 +528,7 @@ header {
    cursor: pointer;
    width: 100px;
    color: #000;
+   z-index: 1;
 }
 .publishing-btns .pubclick {
    font-weight: 700;
@@ -737,6 +738,7 @@ header {
    background: #fff;
    z-index: 1;
 }
+
 .learning-inner {
    display: flex;
    justify-content: center;
@@ -866,7 +868,6 @@ header {
       width: 90%;
    }
 }
-
 
 
 
